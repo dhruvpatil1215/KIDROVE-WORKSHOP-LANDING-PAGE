@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animation-delay-2000 { animation-delay: 2s; }
+  .animation-delay-4000 { animation-delay: 4s; }
+  .animation-delay-6000 { animation-delay: 6s; }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Nunito', 'Comic Sans MS', system-ui, sans-serif;
+  background: #fffbf0;
+  min-height: 100vh;
+}
+
+/* Blob animation */
+@keyframes blob {
+  0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  33% { transform: translate(30px, -40px) scale(1.15) rotate(5deg); }
+  66% { transform: translate(-20px, 20px) scale(0.9) rotate(-3deg); }
+  100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+}
+.animate-blob { animation: blob 8s ease-in-out infinite; }
+
+/* Float animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+.animate-float { animation: float 4s ease-in-out infinite; }
+
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(15px); }
+}
+.animate-float-reverse { animation: float-reverse 5s ease-in-out infinite; }
+
+/* Bounce-in for fun feel */
+@keyframes bounce-in {
+  0% { transform: scale(0.3); opacity: 0; }
+  50% { transform: scale(1.05); }
+  70% { transform: scale(0.95); }
+  100% { transform: scale(1); opacity: 1; }
+}
+.animate-bounce-in { animation: bounce-in 0.6s ease-out; }
+
+/* Wiggle animation for emojis */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-8deg); }
+  75% { transform: rotate(8deg); }
+}
+.animate-wiggle:hover { animation: wiggle 0.4s ease-in-out; }
+
+/* Rainbow gradient text */
+.rainbow-text {
+  background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #54a0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Fun gradient text */
+.fun-gradient {
+  background: linear-gradient(135deg, #ff6b6b, #ff9ff3, #54a0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Playful card styles */
+.fun-card {
+  background: white;
+  border-radius: 1.5rem;
+  border: 3px solid #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.fun-card:hover {
+  border-color: #feca57;
+  transform: translateY(-8px) rotate(-1deg);
+  box-shadow: 0 20px 40px -10px rgba(255, 107, 107, 0.2);
+}
+
+/* Wavy section divider */
+.wavy-bg {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+}
+
+/* Dotted pattern background */
+.dots-pattern {
+  background-image: radial-gradient(circle, #feca57 1.5px, transparent 1.5px);
+  background-size: 30px 30px;
+}
+
+/* Custom scrollbar — playful */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #fffbf0; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff6b6b, #feca57, #48dbfb);
+  border-radius: 999px;
+}
