@@ -1,0 +1,10 @@
+Approach & Future Improvements
+My approach focused on designing a playful, kid-friendly landing page using the rounded Nunito font, custom pastel gradients, and bouncy Framer Motion animations to engage parents and children. I structured the frontend with eight modular, responsive components and built an Express.js backend with built-in input validation, CORS support, and an automated MongoDB fallback database connection.
+
+If given more time, I would improve the application by:
+
+Refining responsiveness at landscape tablet breakpoints to ensure pixel-perfect grids.
+Migrating the codebase to TypeScript for robust compile-time safety and type definitions.
+Implementing server-side schemas using Zod and automated parent email notifications via Nodemailer.
+Writing frontend unit tests with Jest and API endpoint integration tests using Supertest.
+10:12 AM
